@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Horspool {
 
-    public static int patternMatch(String text,String pattern) {
+    private static int patternMatch(String text, String pattern) {
         HashMap<Character,Integer> hashMap = getShiftTable(text,pattern);
         int patternLength = pattern.length();
         int textLength = text.length();
@@ -20,6 +20,7 @@ public class Horspool {
         HashMap<Character,Integer> hashMap  = new HashMap<>();
         int len = pattern.length();
         int textLength = text.length();
+
         for(int i=0;i<textLength;i++)
             if(!hashMap.containsKey(text.charAt(i)))
                 hashMap.put(text.charAt(i),len);
